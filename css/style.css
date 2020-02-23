@@ -1,0 +1,38 @@
+
+  .container
+{
+  background: rgb(238, 238, 238); 
+  width: 1019px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+    padding: 15px;
+  }
+  
+  @media (min-width: 575.98px){
+    .container {
+      max-width: 540px;
+      margin: auto;
+      padding: 1px;
+    }
+  }
+  
+  @media (min-width: 767.98px){
+    .container {
+      max-width: 720px;	
+    }
+  }
+  
+  @media (min-width: 991.98px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1199.98px){
+    .container {
+      max-width: 1140px;
+    }
+  }
