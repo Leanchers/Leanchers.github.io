@@ -1,69 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
-    <title>Портфолио Junior верстальщика!</title>
-  </head>
-
-  <body>
-    <div id="site-container">
-      <header class="page-header">
-        <nav>
-          <ul>
-            <li><a>Главная</a></li>
-            <li><a>Навыки</a></li>
-            <li><a>Опыт</a></li>
-            <li><a>Портфолио</a></li>
-            <li><a>Контакты</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <section class="hero-image">
-        <div class="container">
-          <h1 class="heading">Александр Лада</h1>
-          <p>Студент</p>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Лада Александр Андреевич</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="container-site">
+            <header>
+                <div class="container">
+                    <a href="#"><img src="img/logo.png" alt="logo" width="150px"></a>
+                    <nav>
+                        <ul>
+                            <li><a class="button-active" href="#">Главная</a></li>
+                            <li><a class="button" href="#">Навыки</a></li>
+                            <li><a class="button" href="#">Опыт</a></li>
+                            <li><a class="button" href="#">Портфолио</a></li>
+                            <li><a class="button" href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <h1><span>A</span>лександр<br> Лада</h1>
+                    <p>Веб-разработчик</p>
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo" width="200px">
+                        <p>Движемся вперед!</p>
+                    </div>
+                    <div class="skills">
+                        <h3>Мои навыки</h3>
+                        <ul class="skills-list">
+                            <li class="level"><p>HTML</p><div style="width: 64%;"> </div>80%</li>
+                            <li class="level"><p>CSS</p><div style="width: 32%;"> </div>40%</li>
+                            <li class="level"><p>JavaScript</p><div style="width: 0.8%;"> </div>1%</li>
+                            <li class="level"><p>WordPress</p><div style="width: 8%;"> </div>10%</li>
+                            <li class="level"><p>Photoshop</p><div style="width: 8%;"> </div>10%</li>
+                          </ul>
+                      </div>
+                </div>
+            </main>
+            <footer>
+                <div class="container">
+                    <a href="#"><img src="img/logo.png" alt="logo" width="150px"></a>
+                    <p><a href="http://www.copyright.ru/">Copyright</a> <a href="http://www.copyright.ru/ru/documents/zashita_avtorskih_prav/znak_ohrani_avtorskih_i_smegnih_prav/">©</a> Лада А.А., 2020  <a href="http://www.copyright.ru/ru/documents/registraciy_avtorskih_prav/">Все права защищены</a></p>
+                </div>
+            </footer>
         </div>
-      </section>
-
-      <section class="intro">
-        <div class="container">
-          <h2 class="subheading">Давайте познакомимся</h2>
-          <h3>Пара слов о себе</h3>
-          <p>Текст с парой слов о себе.</p>
-          <h3>Чем могу быть полезен</h3>
-          <p>Текст о том, чем могу быть полезен.</p>
-          <div class="skills">
-            <h3>Мои навыки</h3>
-            <dl class="skills-list">
-              <dt class="skill-html">HTML</dt>
-              <dd class="level"><div style="width: 60%;">60%</div></dd>
-              <dt class="skill-css">CSS</dt>
-              <dd class="level"><div style="width: 40%;">40%</div></dd>
-            </dl>
-          </div>
-        </div>
-      </section>
-
-      <section class="portfolio">
-        <div class="container">
-          <h2 class="subheading">Мои работы</h2>
-
-          <h3>Сайт инструктора Кекса</h3>
-          <p>Небольшой лендинг о школе для начинающих.</p>
-
-          <h3>Блог начинающего верстальщика</h3>
-          <p>Статический блог про обучение HTML и CSS.</p>
-        </div>
-      </section>
-
-      <footer class="page-footer">
-        <div class="container">
-          allada96@mail.ru
-        </div>
-      </footer>
-    </div>
-  </body>
+    </body>
 </html>
