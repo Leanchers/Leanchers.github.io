@@ -217,3 +217,13 @@ footer a{
     text-decoration: none;
     color: rgb(20, 230, 30);
 }
+
+/*--------------Portfolio--------------------*/
+
+.portfolio-list {
+    list-style-type: none;
+}
+
+.portfolio-list li a{
+    color: #17ff65;
+}
