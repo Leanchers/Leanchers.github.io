@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta class="UTF-8">
+        <title>Мороженное</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-navigation">
+                <a class="main-header-logo">
+                    <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина мороженного">
+                </a>
+                <ul>
+                    <li>
+                        <a href="catalog.html">Каталог</a>
+                        <ul>
+                            <li><span>Новинки</span></li>
+                            <li><a href="#">Сливочное</a></li>
+                            <li><a href="#">Щербеты</a></li>
+                            <li><a href="#">Фруктовый лед</a></li>
+                            <li><a href="#">Мелорин</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="service.html">Доставка и оплата</a></li>
+                    <li><a href="about.html">О Компании</a></li>
+                </ul>
+            </nav>
+            <div class="searh-form">
+                <button class="btn glass" id="glass"></button>
+                <form action="#">
+                    <input type="text" name="searh" id="searh" placeholder="Что ищем?">
+                </form>
+            </div>
+            <div class="login-form">
+                <button class="btn login" id="login">Вход</button>
+                <form action="#">
+                    <input type="text" name="email"  placeholder="Электронная почта">
+                    <input type="text" name="password" placeholder="Пароль">
+                    <button class="button-login" type="submit">Войти</button>
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Регистрация</a>
+                </form>
+            </div>
+            <div class="cart-form">
+                <button class="btn cart" id="cart">Пусто</button>
+            </div>
+        </header>
+        <main>
+            <section class="working-information">
+                <p>С 10 до 20, ежедневно</p>
+                <p>8 812 450-25-25</p>
+            </section>
+            <div class="index-main-banner">
+                <div class="slide" id="slide-1">
+                    <p>Крем-брюле и пломбир с малиновым джемом</p>
+
+                  </div>
+                  <div class="slide" id="slide-2">
+                    <p>Шоколадный пломбир и лимонный сорбет</p>
+
+                  </div>
+                  <div class="slide" id="slide-3">
+                    <p>Пломбир с помадкой и клубничный щербет</p>
+                  </div>
+                  <a class="btn" href="#">Давайте оба!</a>
+                  <div class="slide-btns">
+                    <label for="btn-1"></label>
+                    <label for="btn-2"></label>
+                    <label for="btn-3"></label>
+                </div>
+            </div>
+
+            <section class="inndex_banner1">
+                <h2>Малинка даром!</h2>
+                <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                <a href="#">Хочу варенье!</a>
+            </section>
+            
+            <section class="inndex_banner2">
+                <h2>Шоколадки даром!</h2>
+                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
+                <a href="#">Хочу шоколадки!</a>
+            </section>
+
+            <section class="catalog">
+                <ul class="catalog-list">
+                    <li class="catalog-item">
+                        <a href="#">
+                            <img src="img/item1.png" width="267" height="267" alt="orange">
+                            <p>310₽<span>/кг</span></p>
+                            <p>Сливочное с апельсиновым джемом и цитросувой стружкой</p>
+                            <p class="item-button">Быстрый просмотр</p>
+                        </a>
+                    </li>
+                    <li class="catalog-item">
+                        <a href="#">
+                            <div>
+                                <img src="img/item2.png" width="267" height="267" alt="choc">
+                                <p>380₽<span>/кг</span></p>
+                                <p>Сливочно-кофейное с кусочками шоколада</p>
+                                <p class="item-button">Быстрый просмотр</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="catalog-item">
+                        <a href="#">
+                            <img src="img/item3.png" width="267" height="267" alt="strawberry">
+                            <p>355₽<span>/кг</span></p>
+                            <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+                            <p class="item-button">Быстрый просмотр</p>
+                        </a>
+                    </li>
+                    <li class="catalog-item">
+                        <a href="#">
+                            <img src="img/item4.png" width="267" height="267" alt="cream">
+                            <p>415₽<span>/кг</span></p>
+                            <p>Сливочное крем-брюле с карамельной подливкой</p>
+                            <p class="item-button">Быстрый просмотр</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
+            <article>
+                <p>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
+                <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                <p>Доставка нашего мороженого до заказчиков осуществляется
+                    в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+            </article>
+            <article>
+                <h6>Новое в нашем блоге</h6>
+                <a href="#">10  способов сервировки фруктовых щербетов
+                    к столу</a>
+            </article>
+            <section>
+                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+                <form action="#">
+                    <input type="text" name="email"  placeholder="Электронная почта">
+                    <button class="button_send" type="submit">Отправить</button>
+                </form>
+            </section>
+
+            <section class="modal modal-map">
+                <h2 class="visually-hidden">Как до нас добраться</h2>
+                <span class="modal-close">X</span>
+            </section>
+        </main>
+        <footer>
+            <section class="social">
+                <a href="#" class="social-btn social-btn-tw">tw</a>
+                <a href="#" class="social-btn social-btn-inst">inst</a>
+                <a href="#" class="social-btn social-btn-fb">fb</a>
+                <a href="#" class="social-btn social-btn-vk">vk</a>
+            </section>
+            <section class="footer-navigation">
+                <a href="#">Для поставщиков</a>
+                <a href="#">О производстве</a>
+                <a href="#">Наши документы</a>
+                <a href="#">Экологические стандарты</a>
+            </section>
+            <section class="made">
+                <img src="img/logo_lind.png" alt="LIND">
+                <p>Сделано компнанией <a href="https://leanchers.github.io/">LIND</a></p>
+            </section>
+        </footer>
+    </body>
+</html>
