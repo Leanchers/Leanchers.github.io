@@ -29,14 +29,17 @@
             <div class="searh-form">
                 <button class="btn glass" id="glass"></button>
                 <form action="#">
-                    <input type="text" name="searh" id="searh" placeholder="Что ищем?">
+                    <label class="visually-hidden" for="search">Поиск</label>
+                    <input type="text" name="search" id="search" placeholder="Что ищем?">
                 </form>
             </div>
             <div class="login-form">
                 <button class="btn login" id="login">Вход</button>
                 <form action="#">
-                    <input type="text" name="email"  placeholder="Электронная почта">
-                    <input type="text" name="password" placeholder="Пароль">
+                    <label class="visually-hidden" for="user-email">Логин</label>
+                    <input type="text" name="email"  placeholder="Электронная почта" id="user-email">
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input type="text" name="password" placeholder="Пароль" id="user-password">
                     <button class="button-login" type="submit">Войти</button>
                     <a href="#">Забыли пароль?</a>
                     <a href="#">Регистрация</a>
@@ -54,16 +57,16 @@
             <div class="index-main-banner">
                 <div class="slide" id="slide-1">
                     <p>Крем-брюле и пломбир с малиновым джемом</p>
-
+                    <a class="btn" href="#">Давайте оба!</a>
                   </div>
                   <div class="slide" id="slide-2">
                     <p>Шоколадный пломбир и лимонный сорбет</p>
-
+                    <a class="btn" href="#">Давайте оба!</a>
                   </div>
                   <div class="slide" id="slide-3">
                     <p>Пломбир с помадкой и клубничный щербет</p>
+                    <a class="btn" href="#">Давайте оба!</a>
                   </div>
-                  <a class="btn" href="#">Давайте оба!</a>
                   <div class="slide-btns">
                     <label for="btn-1"></label>
                     <label for="btn-2"></label>
@@ -141,7 +144,8 @@
             <section>
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                 <form action="#">
-                    <input type="text" name="email"  placeholder="Электронная почта">
+                    <label for="email" class="visually-hidden">Электронная почта</label>
+                    <input type="text" name="email"  placeholder="Электронная почта" id="email">
                     <button class="button_send" type="submit">Отправить</button>
                 </form>
             </section>
