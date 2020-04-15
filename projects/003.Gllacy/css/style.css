@@ -1,4 +1,87 @@
 body {
-    margin 0;
+    margin: 0;
     padding: 0;
+
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #ffffff;
+
+
+
+    background-color: #849d8f;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.btn {
+    font: inherit;
+
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    text-shadow: 0 2px 5px #a0200b;
+    
+    background-image: linear-gradient( to top, #e74a35, #f26843);
+    box-shadow: 0 2px 2px #ac1000;
+    border: none;
+     
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, rgba(231,74,53,0.8), rgba(242,104,67,0.8));
+
+}
+
+.main-navigation {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    
+    background-color: #849d8f;
+    
+    list-style: none;
+}
+    
+.main-navigation ul {
+    list-style: none;
+}
+
+.main-menu a {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+    
+.main-menu a:hover,
+.main-menu a:focus {
+    color: black;
+    
+    background-color: #ffffff;
+}
+
+.main-menu a:active{
+    background-color: #ededed;
+
+    box-shadow: inset 0 2px 1px #696969;
+}
+
+.extra-menu a {
+    border 0;
+}
+
+.extra-menu a:hover,
+.extra-menu a:focus {
+    background-color: #fbded7;
+}
+
+.extra-menu a:active {
+    background-color: #f6b5a5;
+
+    box-shadow: none;
 }

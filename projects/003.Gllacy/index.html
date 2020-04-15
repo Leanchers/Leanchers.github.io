@@ -3,6 +3,8 @@
     <head>
         <meta class="UTF-8">
         <title>Мороженное</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -11,10 +13,10 @@
                 <a class="main-header-logo">
                     <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина мороженного">
                 </a>
-                <ul>
+                <ul class="main-menu">
                     <li>
                         <a href="catalog.html">Каталог</a>
-                        <ul>
+                        <ul class="extra-menu">
                             <li><span>Новинки</span></li>
                             <li><a href="catalog.html">Сливочное</a></li>
                             <li><a href="#">Щербеты</a></li>
@@ -27,26 +29,26 @@
                 </ul>
             </nav>
             <div class="searh-form">
-                <button class="btn glass" id="glass"></button>
+                <button class="glass" id="glass"></button>
                 <form action="#">
                     <label class="visually-hidden" for="search">Поиск</label>
                     <input type="text" name="search" id="search" placeholder="Что ищем?">
                 </form>
             </div>
             <div class="login-form">
-                <button class="btn login" id="login">Вход</button>
+                <button class="login" id="login">Вход</button>
                 <form action="#">
                     <label class="visually-hidden" for="user-email">Логин</label>
                     <input type="text" name="email"  placeholder="Электронная почта" id="user-email">
                     <label class="visually-hidden" for="user-password">Пароль</label>
                     <input type="text" name="password" placeholder="Пароль" id="user-password">
-                    <button class="button-login" type="submit">Войти</button>
+                    <button class="btn button-login" type="submit">Войти</button>
                     <a href="#">Забыли пароль?</a>
                     <a href="#">Регистрация</a>
                 </form>
             </div>
             <div class="cart-form">
-                <button class="btn cart" id="cart">Пусто</button>
+                <button class="cart" id="cart">Пусто</button>
             </div>
         </header>
         <main>
