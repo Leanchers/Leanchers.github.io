@@ -41,7 +41,7 @@
                     <label class="visually-hidden" for="user-email">Логин</label>
                     <input type="text" name="email"  placeholder="Электронная почта" id="user-email">
                     <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input type="text" name="password" placeholder="Пароль" id="user-password">
+                    <input type="password" name="password" placeholder="Пароль" id="user-password">
                     <button class="btn button-login" type="submit">Войти</button>
                     <a href="#">Забыли пароль?</a>
                     <a href="#">Регистрация</a>
@@ -59,15 +59,15 @@
             <div class="index-main-banner">
                 <div class="slide" id="slide-1">
                     <p>Крем-брюле и пломбир с малиновым джемом</p>
-                    <a class="btn" href="#">Давайте оба!</a>
+                    <a class="btn btn-give" href="#">Давайте оба!</a>
                 </div>
                 <div class="slide" id="slide-2">
                     <p>Шоколадный пломбир и лимонный сорбет</p>
-                    <a class="btn" href="#">Давайте оба!</a>
+                    <a class="btn btn-give" href="#">Давайте оба!</a>
                 </div>
                 <div class="slide" id="slide-3">
                     <p>Пломбир с помадкой и клубничный щербет</p>
-                    <a class="btn" href="#">Давайте оба!</a>
+                    <a class="btn btn-give" href="#">Давайте оба!</a>
                 </div>
                 <div class="slide-btns">
                     <ul class="slides-switches">
@@ -149,28 +149,48 @@
             </section>
             <article class="about-gllacy">
                 <p>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
-                <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-                <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-                <p>Доставка нашего мороженого до заказчиков осуществляется
-                    в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+                <div class="about-columns">
+                    <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                    <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                </div>
+                <div class="about-columns">
+                    <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                    <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+                </div>
             </article>
-            <article>
-                <h6>Новое в нашем блоге</h6>
-                <a href="#">10  способов сервировки фруктовых щербетов
-                    к столу</a>
-            </article>
-            <section>
-                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-                <form action="#">
-                    <label for="email" class="visually-hidden">Электронная почта</label>
-                    <input type="text" name="email"  placeholder="Электронная почта" id="email">
-                    <button class="btn button_send" type="submit">Отправить</button>
-                </form>
-            </section>
+
+            <div class="index-columns">
+                <article class="new-post">
+                    <h6>Новое в нашем блоге</h6>
+                    <a href="#">10  способов сервировки</br>
+                        фруктовых щербетов к</br>
+                        столу</a>
+                </article>
+                <div class="background-suscribe">
+                    <section class="suscribe">
+                        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+                        <form action="#">
+                            <label for="email" class="visually-hidden">Электронная почта</label>
+                            <input type="text" name="email"  placeholder="Электронная почта" id="email">
+                            <button class="btn button_send" type="submit">Отправить</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
 
             <section class="modal modal-map">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
-                <span class="modal-close">X</span>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6108300215958!2d30.32300145685762!3d59.93859962586481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1586984116745!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A713a18917d70b6fb6d30d7b768d9782e6ef1ebd3b45885ecb9353a48243fe0f9&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                <section class="address">
+                    <p>Адрес главного офиса</br>
+                        и офлайн-магазина:</p>
+                    <p class="adress-name">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+                    <p>Для заказов по телефону</p>
+                    <a href="tel:+78124502525">8 812 450-25-25</a>
+                    <p>(с 10 до 20, ежедневно)</p>
+                    <button class="btn" type="button">Форма обратной связи</button>
+                </section>
             </section>
         </main>
         <footer>
@@ -181,7 +201,7 @@
                 <a href="#" class="social-btn social-btn-vk">vk</a>
             </section>
             <section class="footer-navigation">
-                <a href="#">Для поставщиков</a>
+                <a class= "supplier" href="#">Для поставщиков</a>
                 <a href="#">О производстве</a>
                 <a href="#">Наши документы</a>
                 <a href="#">Экологические стандарты</a>
@@ -191,5 +211,18 @@
                 <p>Сделано компнанией <a href="https://leanchers.github.io/">LIND</a></p>
             </section>
         </footer>
+
+        <section class="modal modal-feedback">
+            <p>Мы обязательно вам ответим</p>
+            <form action="#">
+                <label class="visually-hidden" for="user-name">Имя</label>
+                <input type="text" name="name" placeholder="Как вас зовут?" id="user-name">
+                <label class="visually-hidden" for="user-email2">Почта</label>
+                <input type="text" name="email2"  placeholder="Ваша почта для ответа?" id="user-email2">
+                <label class="visually-hidden" for="user-feedback">Обратная связь</label>
+                <input type="text" name="feedback" placeholder="Напишите что-нибудь..." id="user-feedback">
+                <button class="btn button-submit" type="submit">Отправить</button>
+            </form>
+        </section>
     </body>
 </html>
