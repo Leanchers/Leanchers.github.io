@@ -23,7 +23,7 @@
                             <li><a href="contacts.html">Контакты</a></li>
                         </ul>
                         <ul class="user-navigation">
-                            <li class="login-link">
+                            <li>
                                 <a class="login-link" href="login.html">Вход</a>
                             </li>
                         </ul>
@@ -38,7 +38,7 @@
                 <ul class="features-list">
                   <li class="feature-item">
                     <h3>Быстро</h3>
-                    <p>Мы делаем свою работу быстро ! Два часа пролетят не заметно и вы - счастливый обладатель стрижки-минутки !</p>
+                    <p>Мы делаем свою работу быстро ! Два часа пролетят не заметно и вы - счастливый обладатель стильной стрижки-минутки !</p>
                   </li>
                   <li class="feature-item">
                     <h3>Круто</h3>
@@ -69,11 +69,13 @@
                       
                   <section class="gallery">
                     <h2>Фотогалерея</h2>
-                    <figure class="gallery-content">
-                      <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
-                    </figure>
-                    <button class="button gallery-button gallery-button-back">Назад</button>
-                    <button class="button gallery-button gallery-button-next">Вперед</button>
+                    <div class="gallery-container">
+                        <figure class="gallery-content">
+                          <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+                        </figure>
+                        <button class="button gallery-button gallery-button-back">Назад</button>
+                        <button class="button gallery-button gallery-button-next">Вперед</button>
+                    </div>
                   </section>
             </div>
 
@@ -148,11 +150,11 @@
             <p>Введите свой логин и пароль</p>
             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
-                    <label class="vissually-hidden" for="user-login">Логин</label>
+                    <label class="visually-hidden" for="user-login">Логин</label>
                     <input type="text" class="login-icon-user" name="login" placeholder="Логин">
                     </p>
                 <p>
-                    <label class="vissually-hidden" for="user-password">Пароль</label>
+                    <label class="visually-hidden" for="user-password">Пароль</label>
                     <input type="password" class="login-icon-password" name="password" placeholder="Пароль">
                     </p>
                 <p class="login-password-info">

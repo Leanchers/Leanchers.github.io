@@ -40,6 +40,11 @@ a {
 
 }
 
+/* .img {
+    width: 100%;
+    height: auto;
+} */
+
 .btn {
     font: inherit;
     font-size: 18px;
@@ -273,6 +278,7 @@ a {
 .index-banner2 p {
     padding-left: 20px;
 }
+
 
 .catalog {
     margin-bottom: 40px;
