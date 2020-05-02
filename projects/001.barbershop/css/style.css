@@ -425,13 +425,40 @@ input[type="radio"].visually-hidden {
     text-align: center;
 }
 
+.footer-social b {
+    display: block;
+    margin-bottom: 15px;
+}
+
 .footer-social ul {
+    display: flex;
+    width: 141px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+
     list-style: none;
 }
 
 .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
     color: #ffffff;
+
+    background-color: #000000;
 }
+
+.social-button:hover,
+.social-button:focus {
+    filter: invert(100%);
+}
+
 
 .footer-copyright {
     width: 150px;
@@ -441,6 +468,16 @@ input[type="radio"].visually-hidden {
     text-align: center;
 
 
+}
+
+.footer-copyright .button {
+    display: block;
+    margin-right: 0;
+}
+
+.footer-copyright .b {
+    display: block;
+    margin-bottom: 15px;
 }
 
 .footer-copyright .button:hover,
