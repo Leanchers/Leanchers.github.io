@@ -1,14 +1,14 @@
 html {
     margin: 0;
     padding: 0;
+
+    background-color: #849d8f;
 }
 
 body {
-    margin: auto;
+    margin: 0;
     padding: 0;
 
-    min-width: 900px;
-    max-width: 1200px;
 
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
@@ -16,15 +16,42 @@ body {
     font-weight: 500;
     color: #ffffff;
 
-    background-color: #849d8f;
+
 }
 
-.visually-hidden {
+.slide-wrapper {
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #849d8f;
+
+}
+
+.width-container {
+    margin: auto;
+    padding: 0;
+
+    min-width: 900px;
+    max-width: 1200px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbos"].visually-hidden,
+input[type="radio"].visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
+
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
 .container {
@@ -93,7 +120,6 @@ a {
     display: flex;
     vertical-align: bottom;
     align-items: center;
-    background-color: #849d8f;
     
     list-style: none;
 }
@@ -112,19 +138,34 @@ a {
 .main-menu {
     display: flex;
 
-    padding-left: 24px;
+    padding-left: 9px;
 }
 
 .main-menu a {
+    display: block;
+
+    padding: 5px 15px;
+
+    border-radius: 15px;
+
+}
+
+.main-menu span {
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
     
-.main-menu a:hover,
+.main-menu a:hover ,
 .main-menu a:focus {
     color: black;
     
     background-color: #ffffff;
+}
+
+.main-menu a:hover span,
+.main-menu a:focus span{
+    color: black;
+    
 }
 
 .main-menu a:active{
@@ -163,7 +204,114 @@ a {
 
 
 .header-column {
+    min-width: 260px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searh-form {
+    height: 32px;
+}
+
+.glass,
+.login,
+.cart {
+    position: relative;
+    padding: 0;
+    min-width: 32px;
+    min-height: 32px;
+    border: 0;
+
+    font: inherit;
+    color: #ffffff;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+
+
+}
+
+.glass::after {
+
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    width: 17px;
+    height: 17px;
+
+    background-image: url(../img/search.svg);
+
+    background-repeat: no-repeat;
+}
+
+.login span {
+    padding-left: 35px;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.login
+ {
+    min-width: 92px;
+
+
+}
+
+.login::before {
+    
+    content: "";
+
+     position: absolute;
+    top: 6px;
+    left: 16px;
+ 
+    width: 20px;
+    height: 19px;
+
+    background-image: url(../img/login.svg);
+
+    background-repeat: no-repeat;
+}
+
+.cart {
+    min-width: 117px;
+
+}
+
+.cart span {
+    padding-left: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.cart::before {
+    content: "";
+
+     position: absolute;
+    top: 6px;
+    left: 16px;
+ 
+    width: 21px;
+    height: 20px;
+
+    background-image: url(../img/basket.svg);
+
+    background-repeat: no-repeat;
+}
+
+.glass:hover,
+.login:hover,
+.cart:hover {
+    background-color: #000000;
+    filter: invert(100%);
 }
 
 .login-form form,
@@ -215,21 +363,81 @@ a {
 }
 
 #slide-1 {
-    background-image: url(../img/ice-creams-1.png);
-    background-repeat: no-repeat;
+
 }
 #slide-2 {
-    background-image: url(../img/ice-creams-2.png);
-    background-repeat: no-repeat;
+
 }
 #slide-3 {
     height: 500px;
-    background-image: url(../img/ice-creams-3.png);
-    background-repeat: no-repeat;
+
 }
 
 .slides-switches {
+    display: flex;
+
     list-style: none;
+}
+
+.slide-radio label {
+    /* position: relative; */
+    display: block;
+    padding: 0;
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid white;
+    border-radius: 16px;
+
+    background-color: rgba(255, 255, 255, 0);
+
+
+
+    
+}
+
+.slide-radio label:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.slide-radio label:active {
+    background-color: #ffffff;
+}
+
+.slide {
+    display: none;
+}
+
+#btn-1:checked ~ .slide-wrapper #slide-1,
+#btn-2:checked ~ .slide-wrapper #slide-2,
+#btn-3:checked ~ .slide-wrapper #slide-3 {
+  display: block;
+}
+
+#btn-1:checked ~ .slide-wrapper label[for="btn-1"],
+#btn-2:checked ~ .slide-wrapper label[for="btn-2"],
+#btn-3:checked ~ .slide-wrapper label[for="btn-3"] {
+    background-color: #ffffff;
+}
+
+#btn-1:checked ~ .slide-wrapper {
+    background-color: #849d8f;
+    background-image: url(../img/ice-creams-1.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#btn-2:checked ~ .slide-wrapper {
+    background-color: #98a7b7;
+    background-image: url(../img/ice-creams-2.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+#btn-3:checked ~ .slide-wrapper {
+    background-color: #9d8b84;
+    background-image: url(../img/ice-creams-3.png);
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 .index-columns {
