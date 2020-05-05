@@ -185,12 +185,12 @@
                         <article class="about-gllacy">
                             <p>Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</p>
                             <div class="about-columns">
-                                <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-                                <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                                <p class="about-ice">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                                <p class="about-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                             </div>
                             <div class="about-columns">
-                                <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-                                <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
+                                <p class="about-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                                <p class="about-temp">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p>
                             </div>
                         </article>
             
@@ -201,22 +201,22 @@
                                     фруктовых щербетов к</br>
                                     столу</a>
                             </article>
-                            <div class="background-suscribe">
-                                <section class="suscribe">
+                            <div class="background-subscribe">
+                                <section class="subscribe">
                                     <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
                                     <form action="#">
                                         <label for="email" class="visually-hidden">Электронная почта</label>
-                                        <input type="text" name="email"  placeholder="Электронная почта" id="email">
+                                        <input type="email" name="email"  placeholder="Электронная почта" id="email" required>
                                         <button class="btn button_send" type="submit">Отправить</button>
                                     </form>
                                 </section>
                             </div>
                         </div>
             
-                        <section class="modal modal-map">
+                        <section class="map">
                             <h2 class="visually-hidden">Как до нас добраться</h2>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6108300215958!2d30.32300145685762!3d59.93859962586481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1586984116745!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A713a18917d70b6fb6d30d7b768d9782e6ef1ebd3b45885ecb9353a48243fe0f9&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6108300215958!2d30.32300145685762!3d59.93859962586481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1586984116745!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            --> <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A713a18917d70b6fb6d30d7b768d9782e6ef1ebd3b45885ecb9353a48243fe0f9&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
                             <section class="address">
                                 <p>Адрес главного офиса</br>
                                     и офлайн-магазина:</p>
@@ -231,20 +231,34 @@
                     
                     <footer>
                         <section class="social">
-                            <a href="#" class="social-btn social-btn-tw">tw</a>
-                            <a href="#" class="social-btn social-btn-inst">inst</a>
-                            <a href="#" class="social-btn social-btn-fb">fb</a>
-                            <a href="#" class="social-btn social-btn-vk">vk</a>
+                            <ul class="social-list">
+                                <li>
+                                    <a href="#" class="social-btn social-btn-tw"><span class="visually-hidden">tw</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-btn social-btn-inst"><span class="visually-hidden">inst</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-btn social-btn-fb"><span class="visually-hidden">fb</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-btn social-btn-vk"><span class="visually-hidden">vk</span></a>
+                                </li>
+                            </ul>
                         </section>
                         <section class="footer-navigation">
-                            <a class= "supplier" href="#">Для поставщиков</a>
-                            <a href="#">О производстве</a>
-                            <a href="#">Наши документы</a>
-                            <a href="#">Экологические стандарты</a>
+                            <div class="footer-navigation-wrapper">
+                                <a class= "supplier" href="#">Для поставщиков</br></a>
+                                <a href="#">О производстве</a>
+                            </div>
+                            <div  class="footer-navigation-wrapper">
+                                <a href="#">Наши документы</a>
+                                <a href="#">Экологические стандарты</a>
+                            </div>
                         </section>
                         <section class="made">
                             <img src="img/logo-lind.png" alt="LIND">
-                            <p>Сделано компнанией <a href="https://leanchers.github.io/">LIND</a></p>
+                            <p>Сделано компнанией <a href="https://leanchers.github.io/">LIND</a> © 2020</p>
                         </section>
                     </footer>
                 </div>
