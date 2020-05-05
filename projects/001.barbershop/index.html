@@ -155,7 +155,7 @@
         
         <section class="modal modal-login">
             <h2>Личный кабинет</h2>
-            <p>Введите свой логин и пароль</p>
+            <p class="modal-description">Введите свой логин и пароль</p>
             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
                     <label class="visually-hidden" for="user-login">Логин</label>
@@ -165,9 +165,10 @@
                     <label class="visually-hidden" for="user-password">Пароль</label>
                     <input type="password" class="login-icon-password" name="password" placeholder="Пароль">
                     </p>
-                <p class="login-password-info">
+                <p class="login-help">
                     <label class="login-checkbox">
                     <input type="checkbox" name="remember" class="visually-hidden" id="login-password-info">
+                    <span class="checkbox-indicator"></span>
                     Запомните меня
                     </label>
                     <a href="#" class="restore">Я забыл пароль!</a>
@@ -184,5 +185,6 @@
             </p>
             <button class="modal-close">Закрыть</button>
         </section>
+        <div class="modal-overlay"></div>
     </body>
 </html>
