@@ -28,15 +28,15 @@
                                 <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина мороженного">
                             </a>
                             <ul class="main-menu">
-                                <li>
+                                <li class="catalog-list">
                                     <a href="catalog.html"><span>Каталог</span></a>
-                                    <!-- <ul class="extra-menu">
+                                    <ul class="extra-menu">
                                         <li><span>Новинки</span></li>
                                         <li><a href="catalog.html">Сливочное</a></li>
                                         <li><a href="#">Щербеты</a></li>
                                         <li><a href="#">Фруктовый лед</a></li>
                                         <li><a href="#">Мелорин</a></li>
-                                    </ul> -->
+                                    </ul>
                                 </li>
                                 <li><a href="service.html"><span>Доставка и оплата</span></a></li>
                                 <li><a href="about.html"><span>О Компании</span></a></li>
@@ -45,22 +45,34 @@
                         <div class="header-column">
                             <div class="searh-form">
                                 <button class="glass" id="glass"></button>
-                                <form action="#">
-                                    <label class="visually-hidden" for="search">Поиск</label>
-                                    <!-- <input type="text" name="search" id="search" placeholder="Что ищем?"> -->
-                                </form>
+                                <div class="searh-form-form">
+                                    <form action="#">
+                                        <label class="visually-hidden" for="search">Поиск</label>
+                                        <input type="text" name="search" id="search" placeholder="Что ищем?">
+                                    </form>
+                                </div>
                             </div>
                             <div class="login-form">
                                 <button class="login" id="login"><span>Вход</span></button>
-                                <!-- <form action="#">
-                                    <label class="visually-hidden" for="user-email">Логин</label>
-                                    <input type="text" name="email"  placeholder="Электронная почта" id="user-email">
-                                    <label class="visually-hidden" for="user-password">Пароль</label>
-                                    <input type="password" name="password" placeholder="Пароль" id="user-password">
-                                    <button class="btn button-login" type="submit">Войти</button>
-                                    <a href="#">Забыли пароль?</a>
-                                    <a href="#">Регистрация</a>
-                                </form> -->
+                                <section class="modal-login-form">
+                                    <form action="#">
+                                        <p>
+                                            <label class="visually-hidden" for="user-email">Логин</label>
+                                            <input type="text" name="email"  placeholder="Электронная почта" id="user-email">
+                                        </p>
+                                        <p>
+                                            <label class="visually-hidden" for="user-password">Пароль</label>
+                                            <input type="password" name="password" placeholder="Пароль" id="user-password">
+                                        </p>
+                                        <div class="login-help">
+                                            <button class="btn button-login" type="submit">Войти</button>
+                                            <p>
+                                                <a href="#">Забыли пароль?</a>
+                                                <a href="#">Регистрация</a>
+                                            </p>
+                                        </div>
+                                    </form>
+                                </section>
                             </div>
                             <div class="cart-form">
                                 <button class="cart" id="cart"><span>Пусто</span></button>

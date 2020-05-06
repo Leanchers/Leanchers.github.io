@@ -144,6 +144,10 @@ a {
     padding-left: 9px;
 }
 
+.main-menu li {
+    padding-bottom: 10px;
+}
+
 .main-menu a {
     display: block;
 
@@ -177,16 +181,66 @@ a {
     box-shadow: inset 0 2px 1px #696969;
 }
 
+.catalog-list {
+    position: relative;
+}
+
+.catalog-list:hover .extra-menu,
+.catalog-list:focus .extra-menu {
+    display: block;
+}
+
+.extra-menu:hover,
+.extra-menu:focus {
+    display: block;
+}
+
 .extra-menu {
+    display: none;
+    padding: 0;
+    padding-top: 10px;
+    border-radius: 5px;
+
+    position: absolute;
+
+    top: 35px;
+    left: -7px;
+
+    min-width: 143px;
+
     background-color: #f8f7f4;
     color: black;
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
+
+    z-index: 10;
+}
+
+.extra-menu li {
+    padding-bottom: 0px;
+}
+
+
+.extra-menu span {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 57px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    color: #000000;
+
+
+
 }
 
 .extra-menu a {
     border: 0;
+    border-radius: 0;
+    padding: 10px 15px;
     
     color: black;
     font-size: 14px;
@@ -310,20 +364,20 @@ a {
     background-repeat: no-repeat;
 }
 
-.glass:hover,
-.login:hover,
+.searh-form:hover .glass,
+.login-form:hover .login,
 .cart:hover {
     background-color: #ffffff;
 
 }
 
-.glass:hover::after,
-.login:hover::before,
+.searh-form:hover .glass::after,
+.login-form:hover .login::before,
 .cart:hover::before {
     filter: invert();
 }
 
-.login:hover span,
+.login-form:hover span,
 .cart:hover  span{
     color: black;
 }
@@ -349,10 +403,116 @@ a {
     border-bottom: 1px solid #ec593c30;
 }
 
+.searh-form {
+    position: relative;
+
+}
+
+.searh-form-form {
+    display: none;
+
+    
+    position: absolute;
+    top: 16px;    
+    right: -20px;
+
+    z-index: 10;
+}
+
+.searh-form form {
+
+    margin: 20px;
+
+    border-radius: 5px;
+
+    width: 340px;
+    min-height: 84px;
+}
+
+input[name="search"] {
+
+
+    margin:20px 15px;
+    padding: 15px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+
+    box-sizing: border-box;
+
+    min-height: 44px;
+    width: 310px;
+}
+
+.searh-form:hover .searh-form-form,
+.searh-form:focus .searh-form-form,
+.searh-form-form:hover,
+.searh-form-form:focus,
+.searh-form-form:focus-within{
+    display: block;
+}
+
 .index-main-banner {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+}
+
+.login-form {
+    position: relative;
+}
+
+.modal-login-form {
+    display: none;
+
+    position: absolute;
+    top: 26px;    
+    right: -20px;
+
+    z-index: 10;
+}
+
+.modal-login-form form {
+    margin: 10px;
+    padding: 20px 18px;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+    width: 277px;
+}
+
+.modal-login-form p {
+    margin: 0;
+}
+
+input[name="email"],
+input[name="password"] {
+    margin-bottom: 20px;
+    padding: 15px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+
+    box-sizing: border-box;
+
+    min-height: 44px;
+    width: 240px;
+}
+
+.button-login {
+    margin-right: 20px;
+
+    width: 100px;
+}
+
+.login-help {
+    display: flex;
+
+}
+
+
+.login-form:hover .modal-login-form,
+.login-form:focus-within .modal-login-form{
+    display: block;
 }
 
 .working-information {
