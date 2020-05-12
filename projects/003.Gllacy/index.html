@@ -236,7 +236,7 @@
                                 <p>Для заказов по телефону</p>
                                 <a href="tel:+78124502525">8 812 450-25-25</a>
                                 <p>(с 10 до 20, ежедневно)</p>
-                                <button class="btn" type="button">Форма обратной связи</button>
+                                <button class="btn feedback-link" type="button">Форма обратной связи</button>
                             </section>
                         </section>
                     </main>
@@ -278,16 +278,40 @@
         </div>
 
         <section class="modal modal-feedback">
-            <p>Мы обязательно вам ответим</p>
-            <form action="#">
+            <p>Мы обязательно вам ответим!</p>
+            <form class="feedback-form" action="#">
                 <label class="visually-hidden" for="user-name">Имя</label>
                 <input type="text" name="name" placeholder="Как вас зовут?" id="user-name">
                 <label class="visually-hidden" for="user-email2">Почта</label>
                 <input type="text" name="email2"  placeholder="Ваша почта для ответа?" id="user-email2">
                 <label class="visually-hidden" for="user-feedback">Обратная связь</label>
-                <input type="text" name="feedback" placeholder="Напишите что-нибудь..." id="user-feedback">
+                <textarea class="feedback-textarea" type="text" name="feedback" placeholder="Напишите что-нибудь..." id="user-feedback"></textarea>
                 <button class="btn button-submit" type="submit">Отправить</button>
+                <button class="modal-close">Закрыть</button>
             </form>
         </section>
+        <div class="modal-overlay"></div>
+
+        <script>
+            var link = document.querySelector(".feedback-link");
+            var feedback = document.querySelector(".modal-feedback");
+            var close = feedback.querySelector(".modal-close");
+            var overlay = document.querySelector(".modal-overlay");
+
+
+            link.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                feedback.classList.add("modal-show");
+                overlay.classList.add("modal-show");
+
+            })
+
+            close.addEventListener("click", function(evt) {
+                evt.preventDefault();
+                feedback.classList.remove("modal-show");
+                overlay.classList.remove("modal-show");
+            })
+            
+        </script>
     </body>
 </html>
