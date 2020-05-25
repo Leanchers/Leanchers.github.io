@@ -1,0 +1,24 @@
+{
+  "name": "leanchers.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build",
+    "build": "gulp style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leanchers/Leanchers.github.io.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leanchers/Leanchers.github.io/issues"
+  },
+  "homepage": "https://github.com/Leanchers/Leanchers.github.io#readme",
+  "devDependencies": {
+    "gulp-sass": "^4.1.0"
+  }
+}
