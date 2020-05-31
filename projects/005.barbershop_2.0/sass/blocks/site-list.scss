@@ -39,7 +39,10 @@
     .site-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      /* justify-content: flex-start; */
+      flex-grow: 1;
+
+      justify-content: space-around;
   
       width: 570px;
     }
@@ -101,6 +104,7 @@
     
     .site-list {  
       width: 780px;
+      justify-content: flex-start;
     }
     
     .site-list__item {
