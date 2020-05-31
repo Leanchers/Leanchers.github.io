@@ -20,15 +20,3 @@ body {
     }
   }
   
-  .nav-mock {
-    /* Временно для сетки */
-    min-height: 310px;
-  }
-  
-  
-  @media (min-width: $tablet-width) {
-    .nav-mock {
-      /* Временно для сетки */
-      min-height: 70px;
-    }
-  }
