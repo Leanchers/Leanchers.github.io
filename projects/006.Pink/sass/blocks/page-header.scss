@@ -1,0 +1,27 @@
+.page-header {
+  background-color: #2a3747;
+  background-image: url("../img/bg-header-mob.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+@media (min-width: $tablet-width) {
+
+  .page-header {
+    background-image: url("../img/bg-header-tab.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .page-header {
+    background-image: url("../img/bg-header-desk.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+}
