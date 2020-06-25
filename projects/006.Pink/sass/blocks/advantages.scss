@@ -1,0 +1,257 @@
+.advantages {
+    padding-top: 10px;
+
+    text-align: center;
+    
+    background-color: #ffffff;
+    border-top: 1px solid transparent;
+
+}
+
+.advantages__offer {
+    margin-top: 30px;
+
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 300;
+}
+
+.advantages__wrapper {
+    position: relative;
+
+    padding-bottom: 320px;
+
+    background-color: #f2f2f2;
+}
+
+.advantages__wrapper::before {
+   content: "";
+
+   position: absolute;
+   top: 0;
+   right: 0;
+
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 8vw 100vw 0 0; /* размер и форма */ 
+   border-color: #ffffff transparent transparent transparent;  /* red — цвет */ 
+}
+
+.advantages__list {
+    position: relative;
+    z-index: 2;
+
+    padding: 0;
+    padding-top: 50px;
+
+    list-style: none;
+}
+
+.advantages__item img {
+    display: none;
+}
+
+.advantages__title {
+    font-size: 18px;
+}
+
+.advantages__item {
+    padding: 0 10px;
+}
+
+.advantages__wrapper::after {
+
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -78px;
+
+    width: 157px;
+    height: 280px;
+
+    background-image: url("../img/bg-iphone-smile-mobile.png");
+    background-repeat: no-repeat;
+
+}
+
+@media (min-width: $tablet-width) {
+
+    .advantages {
+        padding-top: 30px;
+    }
+
+    .advantages__wrapper {
+        padding-bottom: 25px;
+    }
+
+    .advantages__offer {
+        margin: 0;
+
+        font-size: 40px;
+    }
+
+    .advantages__answer{
+
+        margin: auto;
+        margin-bottom: 80px;
+        max-width: 340px;
+    }
+
+/*     .advantages__wrapper .container {
+        margin-left: auto;
+        width: 50%;
+    } */
+
+    .advantages__list {
+        margin-left: auto;
+        width: 50%;
+
+        text-align: left;
+    }
+
+
+    .advantages__wrapper::after {
+        bottom: 0;
+        left: 15%;
+    
+        width: 270px;
+        height: 480px;
+    
+        background-image: url("../img/bg-iphone-smile-tablet.png");
+        background-repeat: no-repeat;
+    
+    }
+
+    .advantages__wrapper-time {
+        padding-top: 80px;
+        padding-bottom: 120px;
+
+    }
+
+    .advantages__wrapper-time .container {
+        margin: auto;
+        padding-left: 330px;
+        padding-right: 20px;
+        max-width: 650px;
+
+        text-align: left;
+    }
+
+    .advantages__wrapper-time::before {
+        content: "";
+
+        position: absolute;
+        left: 15%;
+        margin-left: -80px;
+
+        width: 240px;
+        height: 280px;
+
+        background-image: url("../img/24_tab.png");
+        background-repeat: no-repeat;
+    }
+
+    .advantages__title-time {
+        padding-right: 125px;
+        
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .advantages__description {
+        margin-top: 0;
+    }
+
+    .advantages__study {
+
+        color: #d22856;
+        text-decoration: none;
+
+        border-bottom: 1px solid #d22856;
+    }
+
+}
+
+@media (min-width: $desktop-width) {
+    .advantages__wrapper-time {
+        padding-top: 80px;
+        padding-bottom: 120px;
+
+        background-color: #f2f2f2;
+
+    }
+
+    
+
+    .advantages__wrapper-time::before {
+        left: 50%;
+        margin-left: -460px;
+
+        width: 300px;
+        height: 345px;
+
+        background-image: url("../img/24_desk.png");
+        background-repeat: no-repeat;
+    }
+
+    .advantages__wrapper::after {
+        display: none;
+    }
+
+    .advantages__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .advantages__item {
+        margin: auto;
+        width: 33.33%;
+        max-width: 270px;
+    }
+
+    .advantages__item img {
+        display: block;
+        margin: auto;
+    }
+
+    .advantages__title {
+        margin-top: 60px;
+
+        font-size: 30px;
+        line-height: 30px;
+        color: #000000;
+    }
+
+    .advantages__description {
+        margin: auto;
+
+        font-size: 18px;
+        max-width: 240px;
+    }
+
+    .advantages__wrapper-time .container {
+
+        padding-left: 455px;
+
+        max-width: 525px;
+    }
+
+    .advantages__title-time {
+        margin-top: 100px;
+    }
+    
+    .advantages__description-time {
+        font-size: 18px;
+    }
+
+
+}
+
+
