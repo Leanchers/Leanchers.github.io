@@ -330,6 +330,7 @@ img {
     background-repeat: no-repeat; } }
 
 .advantages {
+  margin-bottom: 50px;
   padding-top: 10px;
   text-align: center;
   background-color: #ffffff;
@@ -386,6 +387,9 @@ img {
   background-image: url("../img/bg-iphone-smile-mobile.png");
   background-repeat: no-repeat; }
 
+.advantages__wrapper-time {
+  display: none; }
+
 @media (min-width: 660px) {
   .advantages {
     padding-top: 30px; }
@@ -414,6 +418,7 @@ img {
     background-image: url("../img/bg-iphone-smile-tablet.png");
     background-repeat: no-repeat; }
   .advantages__wrapper-time {
+    display: block;
     padding-top: 80px;
     padding-bottom: 120px; }
   .advantages__wrapper-time .container {
@@ -486,8 +491,42 @@ img {
   .advantages__description-time {
     font-size: 18px; } }
 
-/* @import "blocks/stats.scss";
-@import "blocks/page-main.scss";
+.reviews {
+  text-align: center;
+  position: relative; }
+
+.reviews__item {
+  margin: 0; }
+
+.reviews__author-name {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal; }
+
+/* Кнопки вперед и назад */
+.reviews__prev,
+.reviews__next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; }
+
+.reviews__prev {
+  left: 0; }
+
+.reviews__next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+/*@import "blocks/page-main.scss";
 @import "blocks/page-title.scss";
 @import "blocks/button.scss";
 @import "blocks/works.scss";

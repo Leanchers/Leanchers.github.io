@@ -110,35 +110,37 @@
             </section>
 
             <section class="reviews">
-                <div class="reviews__wrapper slider">
-                    <h2 class="visually-hidden">Отзывы о нас</h2>
-                    <div class="reviews__list  slider__list">
-                        <blockquote class="reviews__item  slider__item">
-                            <cite class="reviews__author-name">Николай Петров</cite>
-                            <p class="reviews__author-about">25 лет, водитель трамвая</p>
-                            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                        
-                        </blockquote>
-                        <blockquote class="reviews__item  slider__item">
-                            <cite class="reviews__author-name">Альберт Гронштейт</cite>
-                            <p class="reviews__author-about">25 лет, водитель трамвая</p>
-                            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                        
-                        </blockquote>
-                        <blockquote class="reviews__item  slider__item">
-                            <cite class="reviews__author-name">Василий Пупкин</cite>
-                            <p class="reviews__author-about">25 лет, водитель трамвая</p>
-                            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                        
-                        </blockquote>
-                        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-                        <button class="reviews__next" type="button">Следующий отзыв</button>
+                <div class="container">
+                    <div class="reviews__wrapper slider">
+                        <h2 class="visually-hidden">Отзывы о нас</h2>
+                        <div class="reviews__list  slider__list">
+                            <blockquote class="reviews__item  slider__item">
+                                <cite class="reviews__author-name">Николай Петров</cite>
+                                <p class="reviews__author-about">25 лет, водитель трамвая</p>
+                                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                            
+                            </blockquote>
+                            <blockquote class="reviews__item  slider__item">
+                                <cite class="reviews__author-name">Альберт Гронштейт</cite>
+                                <p class="reviews__author-about">25 лет, водитель трамвая</p>
+                                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                            
+                            </blockquote>
+                            <blockquote class="reviews__item  slider__item">
+                                <cite class="reviews__author-name">Василий Пупкин</cite>
+                                <p class="reviews__author-about">25 лет, водитель трамвая</p>
+                                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                            
+                            </blockquote>
+                            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+                            <button class="reviews__next" type="button">Следующий отзыв</button>
+                        </div>
+                        <p class="reviews__toggles slider__toggles">
+                            <button class="slider__toggle" type="button">1</button>
+                            <button class="slider__toggle" type="button">2</button>
+                            <button class="slider__toggle" type="button">3</button>
+                        </p>
                     </div>
-                    <p class="reviews__toggles slider__toggles">
-                        <button class="slider__toggle" type="button">1</button>
-                        <button class="slider__toggle" type="button">2</button>
-                        <button class="slider__toggle" type="button">3</button>
-                    </p>
                 </div>
             </section>
             
@@ -252,7 +254,55 @@
                 navMain.classList.remove('main-nav--opened');
               }
             });
-          </script>
+        </script>
+
+        <script>
+            var slideIndex = 1;
+            var prev = document.querySelector(".reviews__prev");
+            var next = document.querySelector(".reviews__next");
+
+            prev.addEventListener('click', function() {
+                showSlides(slideIndex -= 1);
+            });
+            next.addEventListener('click', plusSlide);
+            showSlides(slideIndex);
+
+            /* Функция увеличивает индекс на 1, показывает следующй слайд*/
+            function plusSlide() {
+                showSlides(slideIndex += 1);
+            }
+
+            /* Функция уменьшает индекс на 1, показывает предыдущий слайд*/
+            function minusSlide() {
+                showSlides(slideIndex -= 1);
+            }
+
+            /* Устанавливает текущий слайд */
+            /* function currentSlide(n) {
+                showSlides(slideIndex = n);
+            } */
+
+            /*Основная функция слайдера*/
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("slider__item");
+
+
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                /*  */
+                slides[slideIndex - 1].style.display = "block";
+                
+            }
+            
+        </script>
 
     </body>
 </html>
