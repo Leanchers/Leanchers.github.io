@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta name="format-detection" content="telephone=no">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/peppermint.required.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -114,6 +115,35 @@
                     <div class="reviews__wrapper slider">
                         <h2 class="visually-hidden">Отзывы о нас</h2>
                         <div class="reviews__list  slider__list">
+                            <div class="peppermint peppermint-inactive" id="peppermint">
+                                <blockquote class="reviews__item  slider__item">
+                                    <cite class="reviews__author-name">Николай Петров</cite>
+                                    <p class="reviews__author-about">25 лет, водитель трамвая</p>
+                                    <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                                
+                                </blockquote>
+                              
+                                <blockquote class="reviews__item  slider__item">
+                                    <cite class="reviews__author-name">Альберт Гронштейт</cite>
+                                    <p class="reviews__author-about">26 лет, водитель автобуса</p>
+                                    <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей тещей в лесу!»</p>
+                                
+                                </blockquote>
+                                <blockquote class="reviews__item  slider__item">
+                                    <cite class="reviews__author-name">Василий Пупкин</cite>
+                                    <p class="reviews__author-about">27 лет, водитель такси</p>
+                                    <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на все! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                                
+                                </blockquote>
+                                
+                              </div>
+                                <button id="left-arr" class="reviews__prev" type="button">Предыдущий отзыв</button>
+                                <button id="right-arr" class="reviews__next" type="button">Следующий отзыв</button>
+                                <ul id="reviews__toggles" class="reviews__toggles slider__toggles peppermint-dots">
+                                </ul>
+                        </div>
+
+                        <!-- <div class="reviews__list  slider__list">
                             <blockquote class="reviews__item  slider__item">
                                 <cite class="reviews__author-name">Николай Петров</cite>
                                 <p class="reviews__author-about">25 лет, водитель трамвая</p>
@@ -132,18 +162,13 @@
                                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на все! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                             
                             </blockquote>
-                            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-                            <button class="reviews__next" type="button">Следующий отзыв</button>
-                        </div>
-                        <p class="reviews__toggles slider__toggles">
-                            <button class="reviews__toggle slider__toggle active" type="button" onclick="currentSlide(1)"><span class="visually-hidden">1</span></button>
-                            <button class="reviews__toggle slider__toggle" type="button" onclick="currentSlide(2)"><span class="visually-hidden">2</span></button>
-                            <button class="reviews__toggle slider__toggle" type="button " onclick="currentSlide(3)"><span class="visually-hidden">3</span></button>
-                        </p>
+                            
+                        </div> -->
+                        
                     </div>
                 </div>
             </section>
-            
+         
             <section class="price">
                 <h2 class="visually-hidden">Тарифы</h2>
                 <div class="price__wrapper" height="100">
@@ -178,7 +203,7 @@
                         </tbody>
 
                     </table> -->
-                    <p class="price__toggles slider__toggles">
+                    <p class="price__toggles slider__toggles peppermint-dots">
                         <button class="slider__toggle active" type="button"><span class="visually-hidden">1</span></button>
                         <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
                         <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
@@ -257,7 +282,7 @@
             });
         </script>
 
-        <script>
+        <!-- <script>
             /* Слайдера*/
             var slideIndex = 1;
             var prev = document.querySelector(".reviews__prev");
@@ -314,7 +339,89 @@
                 
             }
             
+        </script> -->
+        <script src="script/peppermint.min.js"></script>
+
+        <script>
+            
+            var slider = Peppermint(document.getElementById('peppermint'), {
+                dots:true,
+                dotsContainer:document.getElementById('reviews__toggles')
+            }),
+                //сохранить ссылки на HTML-ноды
+                rightArr = document.getElementById('right-arr'),
+                leftArr = document.getElementById('left-arr'),
+                getSlidesNumberButton = document.getElementById('getslidesnumber');
+               
+            //клик по `#right-arr` переключит на следующий слайд
+            rightArr.addEventListener('click', slider.next, false);
+
+            //клик по `#left-arr` переключит на предыдущий слайд
+            leftArr.addEventListener('click', slider.prev, false);
+
+            //клик по `#getslidesnumber` покажет количество слайдов
+            getSlidesNumberButton.addEventListener('click', function() {
+            alert('There are ' + slider.getSlidesNumber() + ' slides');
+            }, false);
         </script>
 
+<!-- --------------------------------------------------------------- -->
+<div class="container">
+    <div class="reviews__wrapper slider">
+        <h2 class="visually-hidden">Отзывы о нас</h2>
+        <div class="reviews__list  slider__list">
+            <div class="peppermint peppermint-inactive" id="pepper">
+                <blockquote class="reviews__item  slider__item">
+                    <cite class="reviews__author-name">Николай Петров</cite>
+                    <p class="reviews__author-about">25 лет, водитель трамвая</p>
+                    <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                
+                </blockquote>
+              
+                <blockquote class="reviews__item  slider__item">
+                    <cite class="reviews__author-name">Альберт Гронштейт</cite>
+                    <p class="reviews__author-about">26 лет, водитель автобуса</p>
+                    <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей тещей в лесу!»</p>
+                
+                </blockquote>
+                <blockquote class="reviews__item  slider__item">
+                    <cite class="reviews__author-name">Василий Пупкин</cite>
+                    <p class="reviews__author-about">27 лет, водитель такси</p>
+                    <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на все! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                
+                </blockquote>
+                
+              </div>
+                <button id="left--arr" class="reviews__prev" type="button">Предыдущий отзыв</button>
+                <button id="right--arr" class="reviews__next" type="button">Следующий отзыв</button>
+                <ul id="reviews___toggles" class="reviews__toggles slider__toggles peppermint-dots">
+                </ul>
+        </div>
+    </div>
+</div>     
+<!-- -------------------------------------------------------------------- -->   
+
+<script>
+            
+    var slider = Peppermint(document.getElementById('pepper'), {
+        dots:true,
+        dotsContainer:document.getElementById('reviews___toggles')
+    }),
+        //сохранить ссылки на HTML-ноды
+        rightArr = document.getElementById('right--arr'),
+        leftArr = document.getElementById('left--arr'),
+        getSlidesNumberButton = document.getElementById('getslidesnumber');
+       
+    //клик по `#right-arr` переключит на следующий слайд
+    rightArr.addEventListener('click', slider.next, false);
+
+    //клик по `#left-arr` переключит на предыдущий слайд
+    leftArr.addEventListener('click', slider.prev, false);
+
+    //клик по `#getslidesnumber` покажет количество слайдов
+    getSlidesNumberButton.addEventListener('click', function() {
+    alert('There are ' + slider.getSlidesNumber() + ' slides');
+    }, false);
+</script>
     </body>
 </html>
