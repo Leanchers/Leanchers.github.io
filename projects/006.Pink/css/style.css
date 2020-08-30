@@ -526,6 +526,24 @@ img {
   right: 0;
   border-radius: 3px 0 0 3px; }
 
+.slider__toggle {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  box-sizing: content-box;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.3); }
+  .slider__toggle:hover, .slider__toggle:focus {
+    background-color: rgba(0, 0, 0, 0.6); }
+  .slider__toggle:active {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.slider__toggle.active {
+  border: 3px solid #33404e;
+  background-color: rgba(0, 0, 0, 0); }
+
 /*@import "blocks/page-main.scss";
 @import "blocks/page-title.scss";
 @import "blocks/button.scss";

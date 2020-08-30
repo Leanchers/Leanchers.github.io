@@ -122,23 +122,23 @@
                             </blockquote>
                             <blockquote class="reviews__item  slider__item">
                                 <cite class="reviews__author-name">Альберт Гронштейт</cite>
-                                <p class="reviews__author-about">25 лет, водитель трамвая</p>
-                                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                                <p class="reviews__author-about">26 лет, водитель автобуса</p>
+                                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей тещей в лесу!»</p>
                             
                             </blockquote>
                             <blockquote class="reviews__item  slider__item">
                                 <cite class="reviews__author-name">Василий Пупкин</cite>
-                                <p class="reviews__author-about">25 лет, водитель трамвая</p>
-                                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                                <p class="reviews__author-about">27 лет, водитель такси</p>
+                                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на все! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                             
                             </blockquote>
                             <button class="reviews__prev" type="button">Предыдущий отзыв</button>
                             <button class="reviews__next" type="button">Следующий отзыв</button>
                         </div>
                         <p class="reviews__toggles slider__toggles">
-                            <button class="slider__toggle" type="button">1</button>
-                            <button class="slider__toggle" type="button">2</button>
-                            <button class="slider__toggle" type="button">3</button>
+                            <button class="reviews__toggle slider__toggle active" type="button" onclick="currentSlide(1)"><span class="visually-hidden">1</span></button>
+                            <button class="reviews__toggle slider__toggle" type="button" onclick="currentSlide(2)"><span class="visually-hidden">2</span></button>
+                            <button class="reviews__toggle slider__toggle" type="button " onclick="currentSlide(3)"><span class="visually-hidden">3</span></button>
                         </p>
                     </div>
                 </div>
@@ -179,9 +179,9 @@
 
                     </table> -->
                     <p class="price__toggles slider__toggles">
-                        <button class="slider__toggle" type="button">1</button>
-                        <button class="slider__toggle" type="button">2</button>
-                        <button class="slider__toggle" type="button">3</button>
+                        <button class="slider__toggle active" type="button"><span class="visually-hidden">1</span></button>
+                        <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
+                        <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
                     </p>
 
                 </div>
@@ -238,8 +238,9 @@
             </div>
 
         </footer>
-
+        
         <script>
+            /* Скрипт меню*/
             var navMain = document.querySelector('.main-nav');
             var navToggle = document.querySelector('.main-nav__toggle');
           
@@ -257,15 +258,19 @@
         </script>
 
         <script>
+            /* Слайдера*/
             var slideIndex = 1;
             var prev = document.querySelector(".reviews__prev");
             var next = document.querySelector(".reviews__next");
+            var sel = document.querySelector(".reviews__toggle")
 
             prev.addEventListener('click', function() {
                 showSlides(slideIndex -= 1);
             });
             next.addEventListener('click', plusSlide);
             showSlides(slideIndex);
+
+            sel.addEventListener('click', selSlide);
 
             /* Функция увеличивает индекс на 1, показывает следующй слайд*/
             function plusSlide() {
@@ -277,6 +282,10 @@
                 showSlides(slideIndex -= 1);
             }
 
+            function currentSlide(n) {
+                showSlides(slideIndex = n)
+            }
+
             /* Устанавливает текущий слайд */
             /* function currentSlide(n) {
                 showSlides(slideIndex = n);
@@ -285,7 +294,8 @@
             /*Основная функция слайдера*/
             function showSlides(n) {
                 var i;
-                var slides = document.getElementsByClassName("slider__item");
+                var slides = document.getElementsByClassName("reviews__item");
+                var toggle = document.getElementsByClassName("reviews__toggle")
 
 
                 if (n > slides.length) {
@@ -296,9 +306,11 @@
                 }
                 for (i = 0; i < slides.length; i++) {
                     slides[i].style.display = "none";
+                    toggle[i].classList.remove("active");
                 }
                 /*  */
                 slides[slideIndex - 1].style.display = "block";
+                toggle[slideIndex - 1].classList.add("active");
                 
             }
             
