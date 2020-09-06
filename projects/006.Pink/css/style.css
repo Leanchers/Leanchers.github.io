@@ -1,8 +1,12 @@
 @charset "UTF-8";
+html {
+  overflow-x: hidden; }
+
 body {
   min-width: 320px;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-size: 14px;
   line-height: 24px;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -30,6 +34,21 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
+
+.price__field {
+  position: relative;
+  min-width: 60px; }
+
+.price__field--ok::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 15px;
+  border-bottom: 3px solid #3dc644;
+  border-left: 3px solid #3dc644;
+  transform: rotate(-45deg); }
 
 .page-header {
   background-color: #2a3747;

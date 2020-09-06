@@ -1,8 +1,14 @@
 
+html {
+  overflow-x: hidden;
+}
+
 body {
     min-width: 320px;
     margin: 0;
     padding: 0;
+
+    overflow-x: hidden;
   
     font-size: 14px;
     line-height: 24px;
@@ -11,18 +17,18 @@ body {
     font-style: normal;
   
     background-color: #ffffff;
-  }
+}
 
-  .container {
+.container {
     max-width: 960px;
     margin: auto;
     padding: 0 20px;
-  }
+}
   
-  img {
+img {
     max-width: 100%;
     height: auto;
-  }
+}
 
   .visually-hidden:not(:focus):not(:active) {
     position: absolute;
@@ -39,3 +45,23 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+  .price__field {
+    position: relative;
+    min-width: 60px;
+  }
+  
+
+.price__field--ok::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  width: 30px;
+  height: 15px;
+  border-bottom: 3px solid #3dc644 ;
+  border-left:3px solid #3dc644;
+
+  transform: rotate(-45deg);
+}
