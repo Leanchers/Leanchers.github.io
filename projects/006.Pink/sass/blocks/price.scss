@@ -1,0 +1,92 @@
+.price__field--empty,
+.price__value--empty {
+    display: none;
+}
+
+.price__wrapper{
+        min-height: 300px;
+}
+
+.price__list_wrapper {
+    position: relative;
+    margin-right: 60px;
+    min-height: 200px;
+    /* padding: 0 20px; */
+    width: 70%;
+    box-sizing: content-box;
+    z-index: 2;
+}
+
+#pepper {
+ 
+    position: relative;
+
+    margin: 0 20px;
+
+    overflow: visible;
+    
+}
+
+
+.price__list {
+    position: absolute;
+    width: 300%;
+    border-collapse: collapse;
+    z-index: 3;
+}
+.price__value,
+.price__field {
+    border: 1px solid #e5e5e5;
+    text-transform: uppercase;
+}
+.price__value--empty{
+    display: none;
+}
+
+.price__value  {
+color: white;
+
+    background-color: rgba($color: #283645, $alpha: 1.0);
+
+}
+
+.price__list-head {
+    border-radius: 5px 5px 0 0 ;
+}
+.price__list-head tr {
+    height: 100px;
+    border-radius: 5px 5px 0 0 ;
+}
+.price__value {
+    padding-top: 20px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.price__value p {
+    margin-top: 10px;
+
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.price__value--hit {
+    position: relative;
+    overflow: hidden;
+}
+.price__value--hit::before {
+    content: "ХИТ";
+    position: absolute;
+    top:15px;
+    left: 0;
+    margin-left: -75px;
+    height: 30px;
+    width: 200px;
+    
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #d22856;
+    transform: rotate(-45deg);
+}

@@ -12,7 +12,9 @@
     font-weight: 700;
     font-style: normal;
 }
-
+.reviews__author-about {
+    display: none;
+}
 /* Кнопки вперед и назад */
 .reviews__prev,
 .reviews__next {
@@ -28,6 +30,11 @@
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
+}
+
+.reviews__prev,
+.reviews__next {
+    display: none;
 }
 
 .reviews__prev {
@@ -64,4 +71,67 @@
 .slider__toggle.active {
     border: 3px solid #33404e;
     background-color: rgba($color: #000000, $alpha: 0.0);
+}
+
+@media (min-width: $tablet-width) {
+
+    .reviews__wrapper {
+        margin: auto;
+        max-width: 700px;
+    }
+
+    .reviews__author-name {
+        display: none;
+    }
+
+    .reviews__text {
+        font-size: 18px;
+    }
+    .reviews__item {
+
+    }
+    .reviews__author-name--bottom,
+    .reviews__author-about {
+        display: block !important;
+    }
+    .reviews__author-name--bottom {
+        margin-bottom: 5px;
+
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .reviews__author-about {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .reviews .container {
+        position: relative;
+    }
+
+    .reviews__toggles {
+        display: none;
+    }
+    .reviews__prev,
+    .reviews__next {
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border:0;
+    border-radius: 0;
+    border-top: 2px solid rgba($color: #283645, $alpha: 0.3);
+    border-left: 2px solid rgba($color: #283645, $alpha: 0.3);
+    background-color: rgba($color: #000000, $alpha: 0.0);
+    }
+
+    .reviews__prev {
+        transform: rotate(-45deg);
+    }
+    .reviews__next {
+        transform: rotate(135deg);
+    }
 }
