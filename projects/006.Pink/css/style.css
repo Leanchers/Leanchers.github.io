@@ -15,9 +15,9 @@ body {
   background-color: #ffffff; }
 
 .container {
-  max-width: 960px;
+  max-width: 940px;
   margin: auto;
-  padding: 0 20px; }
+  padding: 0 10px; }
 
 img {
   max-width: 100%;
@@ -34,21 +34,6 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
-
-.price__field {
-  position: relative;
-  min-width: 60px; }
-
-.price__field--ok::before {
-  content: "";
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 30px;
-  height: 15px;
-  border-bottom: 3px solid #3dc644;
-  border-left: 3px solid #3dc644;
-  transform: rotate(-45deg); }
 
 .page-header {
   background-color: #2a3747;
@@ -511,8 +496,9 @@ img {
     font-size: 18px; } }
 
 .reviews {
-  text-align: center;
-  position: relative; }
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center; }
 
 .reviews__item {
   margin: 0; }
@@ -611,6 +597,25 @@ img {
   .reviews__next {
     transform: rotate(135deg); } }
 
+.price {
+  position: relative;
+  padding-top: 85px;
+  background-color: #f2f2f2;
+  padding-bottom: 45px; }
+
+.price::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8vw 100vw 0 0;
+  /* размер и форма */
+  border-color: #ffffff transparent transparent transparent;
+  /* red — цвет */ }
+
 .price__field--empty,
 .price__value--empty {
   display: none; }
@@ -621,7 +626,7 @@ img {
 .price__list_wrapper {
   position: relative;
   margin-right: 60px;
-  min-height: 200px;
+  min-height: 300px;
   /* padding: 0 20px; */
   width: 70%;
   box-sizing: content-box;
@@ -629,6 +634,7 @@ img {
 
 #pepper {
   position: relative;
+  min-height: 300px;
   margin: 0 20px;
   overflow: visible; }
 
@@ -637,6 +643,9 @@ img {
   width: 300%;
   border-collapse: collapse;
   z-index: 3; }
+
+.price__list-body {
+  background-color: white; }
 
 .price__value,
 .price__field {
@@ -684,6 +693,115 @@ img {
   font-weight: 400;
   background-color: #d22856;
   transform: rotate(-45deg); }
+
+.price__field {
+  position: relative;
+  text-align: left;
+  padding: 20px;
+  min-height: 60px; }
+
+.price__field--ok::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 30px;
+  height: 15px;
+  border-bottom: 3px solid #3dc644;
+  border-left: 3px solid #3dc644;
+  transform: rotate(-45deg); }
+
+.price__field--no::before,
+.price__field--no::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  border-radius: 5px;
+  width: 37px;
+  height: 3px;
+  background-color: #f25b26; }
+
+.price__field--no::before {
+  transform: rotate(-45deg); }
+
+.price__field--no::after {
+  transform: rotate(45deg); }
+
+.price .peppermint.peppermint-active .peppermint-slides + ul.peppermint-dots {
+  margin-top: 20px; }
+
+@media (min-width: 660px) {
+  .price {
+    padding-bottom: 65px; }
+  .price__wrapper {
+    min-height: 220px; }
+  .price__list {
+    position: relative;
+    width: 100%;
+    border: 0; }
+  .price__list_wrapper {
+    margin: auto;
+    width: auto;
+    min-height: 220px; }
+  .price__list-head tr {
+    height: 85px;
+    min-height: 85px; }
+  .price__value--empty,
+  .price__field--empty {
+    display: block; }
+  .price__value--empty {
+    opacity: 0; }
+  .price__value {
+    padding: 1px;
+    width: 25%;
+    font-size: 16px; }
+  .price__value p {
+    margin: 0;
+    font-size: 18px; }
+  .price__value--hit::before {
+    margin-left: -78px;
+    top: 11px;
+    height: 25px;
+    font-size: 14px; }
+  .price__field {
+    min-height: 10px;
+    padding: 10px 15px;
+    text-transform: none;
+    font-size: 14px; }
+  .price__field span {
+    display: none; }
+  .price__field--ok::before {
+    right: 50%;
+    margin-right: -20px;
+    top: 7px; }
+  .price__field--no::before,
+  .price__field--no::after {
+    right: 50%;
+    margin-right: -20px;
+    top: 21px; } }
+
+@media (min-width: 1200px) {
+  .price {
+    padding-top: 150px; }
+  .price__value {
+    padding: 15px 1px;
+    font-size: 18px; }
+  .price__value p {
+    margin: 10px;
+    font-size: 24px; }
+  .price__field {
+    padding: 19px 15px;
+    font-size: 18px; }
+  .price__field--ok::before {
+    right: 50%;
+    margin-right: -20px;
+    top: 15px; }
+  .price__field--no::before,
+  .price__field--no::after {
+    right: 50%;
+    margin-right: -20px;
+    top: 28px; } }
 
 /*@import "blocks/page-main.scss";
 @import "blocks/page-title.scss";

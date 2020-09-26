@@ -20,9 +20,9 @@ body {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 940px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
   
 img {
@@ -46,22 +46,3 @@ img {
     overflow: hidden;
   }
 
-  .price__field {
-    position: relative;
-    min-width: 60px;
-  }
-  
-
-.price__field--ok::before {
-  content: "";
-  position: absolute;
-  right: 10px;
-  top: 10px;
-
-  width: 30px;
-  height: 15px;
-  border-bottom: 3px solid #3dc644 ;
-  border-left:3px solid #3dc644;
-
-  transform: rotate(-45deg);
-}

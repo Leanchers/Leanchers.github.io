@@ -156,8 +156,8 @@
                 
                     <h2 class="visually-hidden">Тарифы</h2>
                     <div class="price__wrapper" height="300">   
-                            <div class="">
-                                <div class="peppermint peppermint-inactive " id="pepper">
+                            <div id="price-id">
+                                <div class="peppermint peppermint-inactive " id="pepper-off">
                                     <div class="price__list_wrapper">
                                         <table class="price__list">
                                             <thead class="price__list-head" >
@@ -171,21 +171,21 @@
                                             <tbody class="price__list-body" >
                                                 <tr>   
                                                     <td class="price__field price__field--empty">Розовый фильтр</td>
-                                                    <td class="price__field price__field--ok">Розовый фильтр</td>
-                                                    <td class="price__field price__field--ok">Розовый фильтр</td>
-                                                    <td class="price__field price__field--ok">Розовый фильтр</td>
+                                                    <td class="price__field price__field--ok"><span>Розовый фильтр</span></td>
+                                                    <td class="price__field price__field--ok"><span>Розовый фильтр</span></td>
+                                                    <td class="price__field price__field--ok"><span>Розовый фильтр</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="price__field price__field--empty">Смайлики</td>
-                                                    <td class="price__field price__field--no">Смайлики</td>
-                                                    <td class="price__field price__field--ok">Смайлики</td>
-                                                    <td class="price__field price__field--ok">Смайлики</td>
+                                                    <td class="price__field price__field--no"><span>Смайлики</span></td>
+                                                    <td class="price__field price__field--ok"><span>Смайлики</span></td>
+                                                    <td class="price__field price__field--ok"><span>Смайлики</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="price__field price__field--empty">Комментарии</td>
-                                                    <td class="price__field price__field--no">Комментарии</td>
-                                                    <td class="price__field price__field--no">Комментарии</td>
-                                                    <td class="price__field price__field--ok">Комментарии</td>
+                                                    <td class="price__field price__field--no"><span>Комментарии</span></td>
+                                                    <td class="price__field price__field--no"><span>Комментарии</span></td>
+                                                    <td class="price__field price__field--ok"><span>Комментарии</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -195,11 +195,9 @@
                                 </div>
                             </div>
                        
-                        <p class="price__toggles slider__toggles peppermint-dots">
-                            <button class="slider__toggle active" type="button"><span class="visually-hidden">1</span></button>
-                            <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
-                            <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
-                        </p>
+                        <div class="price__toggles slider__toggles peppermint-dots">
+                           
+                        </div>
     
                     </div>
 
@@ -352,9 +350,7 @@
             leftArr.addEventListener('click', slider.prev, false);
 
             //клик по `#getslidesnumber` покажет количество слайдов
-            getSlidesNumberButton.addEventListener('click', function() {
-            alert('There are ' + slider.getSlidesNumber() + ' slides');
-            }, false);
+        
         </script>
 
 <!-- --------------------------------------------------------------- -->
@@ -394,16 +390,38 @@
 <!-- -------------------------------------------------------------------- -->   
 
 <script>
-            
+
+
+
+function changeTableId() {
+        var e = document.querySelector('.advantages')
+        //var w = window.screen.width;
+        var w = e.scrollWidth;
+        var priceWrapper = document.querySelector(".price__wrapper");
+        console.log('w=',w);
+        if (w < '660') {
+            document.getElementById('pepper-off').id = 'pepper';
+            console.log('w1=',w);
+        }
+        if (w >= '660') {
+            document.getElementById('pepper').id = 'pepper-off';
+            console.log('w2=',w);
+            priceWrapper.classList.add("container")
+        }
+    }
+    window.onload = changeTableId();
+
+          
     var slider = Peppermint(document.getElementById('pepper'), {
         dots:true,
-        dotsContainer:document.getElementById('reviews___toggles')
+        startSlide: 1,
+        dotsContainer:document.getElementById('price__toggles')
     }),
         //сохранить ссылки на HTML-ноды
         rightArr = document.getElementById('right--arr'),
         leftArr = document.getElementById('left--arr'),
         getSlidesNumberButton = document.getElementById('getslidesnumber');
-       
+    
     //клик по `#right-arr` переключит на следующий слайд
     rightArr.addEventListener('click', slider.next, false);
 
@@ -411,9 +429,8 @@
     leftArr.addEventListener('click', slider.prev, false);
 
     //клик по `#getslidesnumber` покажет количество слайдов
-    getSlidesNumberButton.addEventListener('click', function() {
-    alert('There are ' + slider.getSlidesNumber() + ' slides');
-    }, false);
+    
+
 </script>
     </body>
 </html>
