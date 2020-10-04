@@ -22,7 +22,7 @@ body {
 .container {
     max-width: 940px;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
   
 img {
@@ -46,3 +46,8 @@ img {
     overflow: hidden;
   }
 
+@media (min-width: $desktop-width) {
+  .container {
+    padding: 0 10px;
+  }
+}
