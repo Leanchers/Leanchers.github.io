@@ -1,0 +1,246 @@
+
+body {
+    margin: 0;
+    padding: 0;
+
+    
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 21px;
+    line-height: 25.6px;
+    font-weight: 600;
+    color: #000000;
+    
+
+}
+
+.container {
+    max-width: 835px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.btn {
+    padding: 0;
+    border: none;
+    font: inherit;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+/*--------  ---------*/
+
+
+
+.page-main {
+    background-color: #FF0000;
+    background-image: url(https://fs.getcourse.ru/fileservice/file/download/a/27537/sc/177/h/5dc3ac4398a0f74dc1e1dfa044352009.png),
+        url(https://fs.getcourse.ru/fileservice/file/download/a/27537/sc/112/h/c8177e8f9db7247f590573a8a1a22c55.png);
+    background-position: left top,397px 855px;
+    background-repeat: no-repeat;
+    min-height: 1000px;
+
+}
+
+.header {
+    padding-top: 55px;
+}
+
+.container {
+    max-width: 835px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.header__logo {
+
+    margin-bottom: 45px;
+    width: 344px;
+    /* box-shadow: 0px 2px 2px 0px #000000 25%; */
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.registrarion {
+    margin-bottom: 47px;
+    padding: 30px 40px;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.5), inset 0px 4px 1px rgba(255, 255, 255, 0.61);
+    border-radius: 20px;
+
+    background-color: #e2e2e2;
+}
+
+.registrarion h1 {
+    margin-top: 39px;
+    margin-bottom: 45px;
+
+    font-size: 29px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+.btn-reg {
+    width: 100%;
+    min-height: 87px;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.5), inset 0px 4px 1px rgba(255, 255, 255, 0.61);
+    border-radius: 10px;
+
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 28px;
+    text-transform: uppercase;
+    background: #F5D453;
+}
+
+
+.about_web {
+    margin-bottom: 40px;
+
+    color: #606060;
+}
+
+.time-wrapper {
+    position: relative;
+
+    width: 530px;
+    min-height: 105px;
+    margin: auto;
+    margin-bottom: 35px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+.time-wrapper::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 103px;
+    height: 111px;
+
+    background-image: url(https://fs.getcourse.ru/fileservice/file/download/a/27537/sc/475/h/d537670e86d5ba4452586705132cc396.svg);
+    background-repeat: no-repeat;
+}
+
+.time-wrapper h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+
+    text-align: right;
+}
+
+.time {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    color: #8A782F;
+    text-transform: uppercase;
+}
+
+
+/*--------  ---------*/
+
+.decorative-separator {
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 27px;
+    
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+
+
+.decorative-separator::before,
+.decorative-separator::after {
+  content: "";
+  
+
+  margin-left: -2px;
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  width: 50px;
+  height: 19px;
+
+  border-top: 3px solid #8A782F;
+
+}
+
+.decorative-separator::before {
+    margin-right: -2px;
+}
+/*--------  ---------*/
+
+.speaker {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 661px;
+}
+
+.speaker__name {
+    margin-top: 21px;
+    margin-bottom: 21px;
+
+    text-align: left;
+
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #606060;
+}
+
+
+.name {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 34px;
+    line-height: 41px;
+    color: #000000;
+}
+
+.speaker__photo {
+
+
+   filter: drop-shadow(0px 2px 2px rgba(96, 96, 96, 0.7));
+
+}
+
+/*--------  ---------*/
+.field-input-block label {
+    position: relative;
+}
+
+.field-input-block .asd::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 20px;
+    height: 20px;
+
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.field-input-block input[type="radio"]:checked + .asd::before {
+    background-color: yellow;
+}
+
+.btn-prev {
+    display: block !important;
+}
